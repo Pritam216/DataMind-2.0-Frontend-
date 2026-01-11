@@ -1,0 +1,38 @@
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 12px;
+}
+
+.chat-bubble {
+  max-width: 75%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.chat-bubble.user {
+  background: var(--bubble-user);
+  color: white;
+  margin-left: auto;
+  border-bottom-right-radius: 6px;
+}
+
+.chat-bubble.ai {
+  background: var(--bubble-bot);
+  color: var(--text);
+  margin-right: auto;
+  border-bottom-left-radius: 6px;
+}
+
+.dark .chat-bubble.ai p,
+.dark .chat-bubble.ai li,
+.dark .chat-bubble.ai code {
+  color: #e5e7eb;
+}
+
+.dark .chat-bubble.ai code {
+  background: #020617;
+}

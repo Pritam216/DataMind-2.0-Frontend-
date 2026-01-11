@@ -1,0 +1,45 @@
+.docs-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: var(--card-bg);
+  color: var(--text);
+  border-radius: 18px;
+  line-height: 1.8;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+/* Headings */
+.docs-container h1,
+.docs-container h2,
+.docs-container h3 {
+  background: linear-gradient(90deg, #6366f1, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Paragraphs & lists */
+.docs-container p,
+.docs-container li {
+  color: var(--text);
+}
+
+/* Code blocks */
+.docs-container code {
+  background: rgba(99, 102, 241, 0.12);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+/* Dark mode fine-tuning */
+[data-theme="dark"] .docs-container code {
+  background: rgba(99, 102, 241, 0.25);
+}
+
+/* Horizontal rule */
+.docs-container hr {
+  border: none;
+  border-top: 1px solid rgba(148, 163, 184, 0.25);
+  margin: 24px 0;
+}

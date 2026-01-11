@@ -1,0 +1,329 @@
+-------------------- GLOBAL --------------------
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  color: #1f2937;
+}
+
+/* -------------------- LAYOUT -------------------- */
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* -------------------- LEFT PANEL -------------------- */
+.left-panel {
+  width: 60%;
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.left-panel h2 {
+  font-size: 26px;
+  background: linear-gradient(90deg, #4f46e5, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* -------------------- CARD -------------------- */
+.card {
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+/* -------------------- FILE INPUT -------------------- */
+/* input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: 2px dashed #c7d2fe;
+  background: #eef2ff;
+  cursor: pointer;
+} */
+
+/* -------------------- BUTTONS -------------------- */
+button {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.35);
+}
+
+button:disabled {
+  background: #c7d2fe;
+  cursor: not-allowed;
+}
+
+/* -------------------- MARKDOWN -------------------- */
+.markdown img {
+  max-width: 100%;
+  border-radius: 14px;
+  margin: 16px 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+  color: #4f46e5;
+}
+
+/* -------------------- RIGHT PANEL -------------------- */
+.right-panel {
+  flex: 1;
+  padding: 24px;
+  border-left: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #ffffff, #f9fafb);
+}
+
+/* -------------------- CHAT -------------------- */
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 12px;
+}
+
+.chat-bubble {
+  max-width: 75%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.chat-bubble.user {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+  margin-left: auto;
+  border-bottom-right-radius: 6px;
+}
+
+.chat-bubble.ai {
+  background: #f1f5f9;
+  color: #1f2937;
+  margin-right: auto;
+  border-bottom-left-radius: 6px;
+}
+
+/* -------------------- CHAT INPUT -------------------- */
+.chat-input {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+}
+
+/* -------------------- LOCKED CHAT -------------------- */
+.chat-locked {
+  filter: blur(3px);
+  pointer-events: none;
+}
+
+
+.summary-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary-header button {
+  background: linear-gradient(135deg, #6366f1, #22d3ee);
+  border: none;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.summary-card.collapsed {
+  max-height: 70px;
+  overflow: hidden;
+}
+
+
+/* LIGHT MODE */
+body.light {
+  --bg: #f8fafc;
+  --card-bg: #ffffff;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --border: #e5e7eb;
+  --input-bg: #ffffff;
+  --bubble-user: #6366f1;
+  --bubble-bot: #e2e8f0;
+}
+
+/* DARK MODE */
+body.dark {
+  --bg: #0b1220;
+  --card-bg: #020617;
+  --text: #e5e7eb;
+  --text-muted: #94a3b8;
+  --border: #1e293b;
+  --input-bg: #020617;
+  --bubble-user: #6366f1;
+  --bubble-bot: #1e293b;
+}
+
+/* body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+} */
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+.chat-card {
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.bubble.user {
+  background: var(--bubble-user);
+  color: white;
+}
+
+.bubble.bot {
+  background: var(--bubble-bot);
+  color: var(--text);
+}
+
+.chat-input input {
+  background: var(--input-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.chat-input input::placeholder {
+  color: var(--text-muted);
+}
+
+.upload-box {
+  background: var(--card-bg);
+  border: 2px dashed var(--border);
+  color: var(--text-muted);
+}
+
+button {
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+button.primary {
+  background: linear-gradient(135deg, #6366f1, #22d3ee);
+  color: white;
+  border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------- THEME -------------------- */
+body.light {
+  --bg: #f8fafc;
+  --card-bg: #ffffff;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --border: #e5e7eb;
+  --input-bg: #ffffff;
+  --bubble-user: #6366f1;
+  --bubble-bot: #e2e8f0;
+}
+
+body.dark {
+  --bg: #0b1220;
+  --card-bg: #020617;
+  --text: #e5e7eb;
+  --text-muted: #94a3b8;
+  --border: #1e293b;
+  --input-bg: #020617;
+  --bubble-user: #6366f1;
+  --bubble-bot: #1e293b;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* -------------------- APP LAYOUT -------------------- */
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+.left-panel {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.right-panel {
+  flex: 1;
+  padding: 24px;
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}

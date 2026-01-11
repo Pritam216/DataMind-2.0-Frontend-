@@ -1,0 +1,108 @@
+.summary-card {
+  background: var(--card-bg);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border);
+
+  /* ✅ IMPORTANT */
+  color: #111827; /* black text for light mode */
+}
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary-header h3 {
+  margin: 0;
+}
+
+.summary-header button {
+  background: linear-gradient(135deg, #6366f1, #22d3ee);
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.summary-card.collapsed {
+  max-height: 70px;
+  overflow: hidden;
+}
+
+/* -----------------------
+   MARKDOWN CONTENT
+------------------------ */
+.summary-card p,
+.summary-card li,
+.summary-card span,
+.summary-card strong,
+.summary-card em {
+  color: inherit;
+}
+
+.summary-card h1,
+.summary-card h2,
+.summary-card h3,
+.summary-card h4 {
+  color: #4f46e5;
+}
+
+.summary-card code {
+  background: #f3f4f6;
+  padding: 2px 6px;
+  border-radius: 6px;
+  color: #111827;
+}
+
+.summary-card pre {
+  background: #f9fafb;
+  padding: 12px;
+  border-radius: 12px;
+  overflow-x: auto;
+}
+
+/* Images inside markdown */
+.summary-card img {
+  max-width: 100%;
+  border-radius: 14px;
+  margin: 16px 0;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* -----------------------
+   DARK MODE
+------------------------ */
+.dark .summary-card {
+  background: #0f172a;
+  color: #f8fafc; /* white text */
+  border-color: #1e293b;
+}
+
+.dark .summary-card h1,
+.dark .summary-card h2,
+.dark .summary-card h3,
+.dark .summary-card h4 {
+  color: #a5b4fc;
+}
+
+.dark .summary-card code {
+  background: #020617;
+  color: #38bdf8;
+}
+
+.dark .summary-card pre {
+  background: #020617;
+}
+
+.dark .summary-card a {
+  color: #60a5fa;
+}
+
+.summary-card {
+  transition: background 0.25s ease, color 0.25s ease;
+}
