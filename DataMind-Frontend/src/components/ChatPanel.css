@@ -55,7 +55,7 @@
   color: white;
 } */
 
-/* ---------------- CHAT CARD ---------------- */
+---------------- CHAT CARD ----------------
 .chat-card {
   background: var(--card-bg);
   color: var(--text);
@@ -261,4 +261,68 @@ body.dark .chat-overlay-content h3 {
 
 body.dark .chat-overlay-content p {
   color: #cbd5f5;
+}
+
+/* ---------------- CHAT CONTENT ---------------- */
+.chat-content {
+  position: relative;
+  flex: 1; /* Take all remaining space */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Hide overflow so chat-messages handles scroll */
+}
+
+/* Blur ONLY the chat UI */
+.chat-content.blurred {
+  filter: blur(4px);
+  pointer-events: none;
+}
+
+/* ---------------- CHAT MESSAGES ---------------- */
+.chat-messages {
+  flex: 1; /* Take all space inside chat-content */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-right: 8px; /* small padding for scrollbar */
+  margin-bottom: 12px;
+  scrollbar-width: thin; /* Firefox */
+}
+
+/* Webkit scrollbar for Chrome, Edge */
+.chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: #a5b4fc; /* light blue thumb */
+  border-radius: 3px;
+}
+
+body.dark .chat-messages::-webkit-scrollbar-thumb {
+  background: #3b82f6; /* dark mode thumb */
+}
+
+/* ---------------- MESSAGE BUBBLES ---------------- */
+.chat-bubble.user {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: #ffffff;
+  margin-left: auto;
+  border-bottom-right-radius: 6px;
+}
+
+.chat-bubble.ai {
+  background: var(--bubble-bot);
+  color: var(--text);
+  margin-right: auto;
+  border-bottom-left-radius: 6px;
+}
+
+/* ---------------- LIGHT & DARK MODE ---------------- */
+body.light .chat-bubble.ai {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+body.dark .chat-bubble.ai {
+  background: #1e293b;
+  color: #e5e7eb;
 }

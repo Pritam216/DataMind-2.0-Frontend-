@@ -8,14 +8,8 @@ export default function Footer() {
       </p>
 
       <div className="footer-links">
-        <a href="https://github.com/yourusername" target="_blank">
-          GitHub
-        </a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank">
-          LinkedIn
-        </a>
-        <a href="https://twitter.com/yourhandle" target="_blank">
-          Twitter
+        <a href="https://pritam-kumar-roy.vercel.app/" target="_blank">
+          Contact
         </a>
       </div>
     </footer>
