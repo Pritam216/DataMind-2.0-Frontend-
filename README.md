@@ -9,6 +9,18 @@
 
 ---
 
+### Backend Github repo : [Go to](https://github.com/Pritam216/DataMind-2.0)
+
+---
+
+## 🌐 Live Demo
+
+🔗 **Live App:** https://datamind-agent.vercel.app/
+
+🎥 **Demo Video:** [![DataMind Frontend App](https://github.com/user-attachments/assets/2d4ed6cd-0b60-48e1-a920-ac56c2f509bb)](https://youtu.be/xN4UpiGVheg)
+
+
+---
 ## 🚀 Overview
 
 **DataMind 2.0 Frontend** is a modern, responsive web interface for an AI-powered Exploratory Data Analysis (EDA) and conversational analytics platform.
@@ -21,16 +33,6 @@ It allows users to:
 * Interact with data via a chat interface
 * Toggle between light and dark themes
 * Navigate clean documentation
-
-### Backend Github repo : [Go to](https://github.com/Pritam216/DataMind-2.0)
-
----
-
-## 🌐 Live Demo
-
-🔗 **Live App:** https://datamind-agent.vercel.app/
-🎥 **Demo Video:** [![DataMind Frontend App](https://github.com/user-attachments/assets/2d4ed6cd-0b60-48e1-a920-ac56c2f509bb)](https://youtu.be/xN4UpiGVheg)
-
 
 ---
 
