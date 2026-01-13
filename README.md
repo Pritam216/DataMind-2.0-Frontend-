@@ -22,12 +22,15 @@ It allows users to:
 * Toggle between light and dark themes
 * Navigate clean documentation
 
+### Backend Github repo : ![Go to](https://github.com/Pritam216/DataMind-2.0)
+
 ---
 
 ## 🌐 Live Demo
 
-🔗 **Live App:** [Your Demo Link Here]
-🎥 **Demo Video:** [YouTube Demo Link Here]
+🔗 **Live App:** https://datamind-agent.vercel.app/
+🎥 **Demo Video:** [![DataMind Frontend App](https://github.com/user-attachments/assets/2d4ed6cd-0b60-48e1-a920-ac56c2f509bb)](https://youtu.be/xN4UpiGVheg)
+
 
 ---
 
@@ -140,12 +143,3 @@ Supports environment-based API configuration.
 Built with ❤️ for data-driven intelligence
 
 ---
-
-If you want, next I can:
-
-* Write **backend README**
-* Create a **root monorepo README**
-* Make this README **hackathon/judge optimized**
-* Add **screenshots section with captions**
-
-Just tell me.
